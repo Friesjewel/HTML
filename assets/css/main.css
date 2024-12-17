@@ -1704,54 +1704,6 @@ input, select, textarea {
 
 		}
 
-/* Container */
-
-	.container {
-		margin: 0 auto;
-		max-width: calc(100% - 4.5em);
-		width: 45em;
-	}
-
-		.container.xsmall {
-			width: 11.25em;
-		}
-
-		.container.small {
-			width: 22.5em;
-		}
-
-		.container.medium {
-			width: 33.75em;
-		}
-
-		.container.large {
-			width: 56.25em;
-		}
-
-		.container.xlarge {
-			width: 67.5em;
-		}
-
-		.container.max {
-			width: 100%;
-		}
-
-		@media screen and (max-width: 1024px) {
-
-			.container {
-				width: 100% !important;
-			}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			.container {
-				max-width: calc(100% - 3.375em);
-			}
-
-		}
-
 /* Section/Article */
 
 	section.special, article.special {
@@ -2250,127 +2202,6 @@ input, select, textarea {
 		margin: 0 0 2.25em 0;
 	}
 
-/* Actions */
-
-	ul.actions {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		cursor: default;
-		list-style: none;
-		margin-left: -1.125em;
-		padding-left: 0;
-	}
-
-		ul.actions li {
-			padding: 0 0 0 1.125em;
-			vertical-align: middle;
-		}
-
-		ul.actions.special {
-			-moz-justify-content: center;
-			-webkit-justify-content: center;
-			-ms-justify-content: center;
-			justify-content: center;
-			width: 100%;
-			margin-left: 0;
-		}
-
-			ul.actions.special li:first-child {
-				padding-left: 0;
-			}
-
-		ul.actions.stacked {
-			-moz-flex-direction: column;
-			-webkit-flex-direction: column;
-			-ms-flex-direction: column;
-			flex-direction: column;
-			margin-left: 0;
-		}
-
-			ul.actions.stacked li {
-				padding: 1.125em 0 0 0;
-			}
-
-				ul.actions.stacked li:first-child {
-					padding-top: 0;
-				}
-
-		ul.actions.fit {
-			width: calc(100% + 1.125em);
-		}
-
-			ul.actions.fit li {
-				-moz-flex-grow: 1;
-				-webkit-flex-grow: 1;
-				-ms-flex-grow: 1;
-				flex-grow: 1;
-				-moz-flex-shrink: 1;
-				-webkit-flex-shrink: 1;
-				-ms-flex-shrink: 1;
-				flex-shrink: 1;
-				width: 100%;
-			}
-
-				ul.actions.fit li > * {
-					width: 100%;
-				}
-
-			ul.actions.fit.stacked {
-				width: 100%;
-			}
-
-		@media screen and (max-width: 480px) {
-
-			ul.actions:not(.fixed) {
-				-moz-flex-direction: column;
-				-webkit-flex-direction: column;
-				-ms-flex-direction: column;
-				flex-direction: column;
-				margin-left: 0;
-				width: 100% !important;
-			}
-
-				ul.actions:not(.fixed) li {
-					-moz-flex-grow: 1;
-					-webkit-flex-grow: 1;
-					-ms-flex-grow: 1;
-					flex-grow: 1;
-					-moz-flex-shrink: 1;
-					-webkit-flex-shrink: 1;
-					-ms-flex-shrink: 1;
-					flex-shrink: 1;
-					padding: 1.125em 0 0 0;
-					text-align: center;
-					width: 100%;
-				}
-
-					ul.actions:not(.fixed) li > * {
-						width: 100%;
-					}
-
-					ul.actions:not(.fixed) li:first-child {
-						padding-top: 0;
-					}
-
-					ul.actions:not(.fixed) li input[type="submit"],
-					ul.actions:not(.fixed) li input[type="reset"],
-					ul.actions:not(.fixed) li input[type="button"],
-					ul.actions:not(.fixed) li button,
-					ul.actions:not(.fixed) li .button {
-						width: 100%;
-					}
-
-						ul.actions:not(.fixed) li input[type="submit"].icon:before,
-						ul.actions:not(.fixed) li input[type="reset"].icon:before,
-						ul.actions:not(.fixed) li input[type="button"].icon:before,
-						ul.actions:not(.fixed) li button.icon:before,
-						ul.actions:not(.fixed) li .button.icon:before {
-							margin-left: -0.5rem;
-						}
-
-		}
 
 /* Feature Icons */
 
@@ -2440,8 +2271,20 @@ ul.feature-icons li {
     font-size: 1.2em;
     color: #333;
     margin-left: 15px; /* Ruimte tussen icoon en tekst */
+	
 }
 
+@media (max-width: 768px) {
+    ul.feature-icons {
+        flex-direction: column; /* Zet de knoppen onder elkaar op mobiele apparaten */
+        align-items: center; /* Centreer de knoppen */
+    }
+
+    ul.feature-icons li {
+        width: 100%; /* Zorg ervoor dat de knoppen de volledige breedte van het scherm innemen */
+        margin: 0 0 1em 0; /* Ruimte tussen de knoppen */
+		}
+	}
 
 
 /* Button */
@@ -3254,3 +3097,343 @@ ul.feature-icons li {
 			}
 
 	}
+		/* Algemene stijl voor spelregels */
+#three {
+	background: #f4faff;
+	padding: 2em 1em;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	font-family: Arial, sans-serif;
+  }
+  
+  #three h3 {
+	text-align: center;
+	font-size: 2em;
+	color: #333;
+	margin-bottom: 1em;
+  }
+  
+  .rule-section {
+	margin-bottom: 2em;
+  }
+  
+  .rule-section h4 {
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	color: #0078D7;
+	display: flex;
+	align-items: center;
+  }
+  
+  .rule-section h4 i {
+	margin-right: 0.5em;
+	color: #4acaa8;
+  }
+  
+  .rule-section p {
+	font-size: 1.1em;
+	line-height: 1.6;
+	margin-bottom: 1em;
+	color: #555;
+  }
+  
+  .rules-list {
+	list-style: none;
+	padding-left: 0;
+  }
+  
+  .rules-list li {
+	position: relative;
+	font-size: 1.1em;
+	margin-bottom: 0.75em;
+	color: #444;
+	padding-left: 1.5em;
+  }
+  
+  .rules-list li:before {
+	content: "\2022"; /* Bullet icon */
+	position: absolute;
+	left: 0;
+	color: #0078D7;
+	font-size: 1.5em;
+  }
+  
+  .highlight {
+	color: #4acaa8;
+	font-weight: bold;
+  }
+  
+
+  /* four */
+
+  /* Stijl voor Soorten Slagen */
+#four {
+	background: #fdfaf6;
+	padding: 2em 1em;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #four h3 {
+	text-align: center;
+	font-size: 2em;
+	color: #333;
+	margin-bottom: 1.5em;
+  }
+  
+  .stroke-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5em;
+  }
+  
+  .stroke {
+	background: #ffffff;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	padding: 1.5em;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stroke h4 {
+	font-size: 1.25em;
+	margin-bottom: 0.5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .stroke h4 i {
+	margin-right: 0.5em;
+	color: #4acaa8;
+	font-size: 1.5em;
+  }
+  
+  .stroke p {
+	font-size: 1em;
+	line-height: 1.5;
+	color: #555;
+  }
+  
+  /* Video sectie */
+  .video-section {
+	margin-top: 2em;
+	text-align: center;
+  }
+  
+  .video-section h3 {
+	font-size: 1.75em;
+	margin-bottom: 1em;
+	color: #333;
+  }
+  
+  iframe {
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  /* Footer Section */
+#footer {
+	background-color: #2a2a2a; /* Donkere achtergrondkleur */
+	color: #ffffff; /* Witte tekstkleur */
+	padding: 2em 0; /* Ruimte rondom */
+	text-align: center; /* Centreren van de inhoud */
+  }
+  
+  #footer .container {
+	max-width: 1200px;
+	margin: 0 auto; /* Horizontaal centreren */
+	padding: 0 1em; /* Ruimte aan de zijkanten voor mobiel */
+  }
+  
+  #footer ul.copyright {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  #footer ul.copyright p {
+	margin: 0;
+	font-size: 0.875em; /* Kleiner lettertype */
+	line-height: 1.6; /* Ruimte tussen regels */
+	color: #b0b0b0; /* Lichtgrijze kleur voor subtiele tekst */
+  }
+  
+  #footer ul.copyright a {
+	color: #4acaa8; /* Frisse groene kleur voor links */
+	text-decoration: none; /* Geen onderstreping */
+  }
+  
+  #footer ul.copyright a:hover {
+	color: #32a383; /* Donkere tint voor hover-effect */
+	text-decoration: underline; /* Onderstreping bij hover */
+  }
+  
+  /* Creative Commons Icons */
+  #footer ul.copyright img {
+	display: inline-block;
+	height: 22px;
+	vertical-align: middle;
+	margin-left: 3px;
+  }
+  
+  /* Responsief gedrag */
+  @media (max-width: 768px) {
+	#footer {
+	  padding: 1.5em 0;
+	}
+  
+	#footer ul.copyright p {
+	  font-size: 0.75em; /* Kleiner lettertype op kleine schermen */
+	}
+  }
+
+  /* One Section */
+#one {
+	background-color: #f4f4f4; /* Lichtgrijze achtergrond */
+	padding: 4em 0; /* Ruimte boven en onder de sectie */
+  }
+  
+  #one .image.main {
+	text-align: center;
+	margin-bottom: 2em; /* Ruimte onder de afbeelding */
+  }
+  
+  #one .image.main img {
+	width: 100%;
+	max-width: 1200px; /* Limiteer maximale breedte voor grote schermen */
+	border-radius: 10px; /* Subtiele afronding van de hoeken */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor diepte */
+  }
+  
+  #one .container {
+	text-align: center; /* Centraal uitlijnen van tekst */
+	max-width: 800px; /* Max breedte voor betere leesbaarheid */
+	margin: 0 auto; /* Centraal plaatsen van de container */
+  }
+  
+  #one header.major h2 {
+	font-size: 2.25em; /* Grotere koptekst */
+	font-weight: 700;
+	color: #4acaa8; /* Groene tekstkleur passend bij thema */
+	margin-bottom: 0.5em;
+  }
+  
+  #one p {
+	font-size: 1.1em; /* Licht vergroot lettertype voor betere leesbaarheid */
+	color: #555555; /* Donkergrijze kleur voor contrast */
+	line-height: 1.75; /* Meer ruimte tussen tekstregels */
+	margin: 0 auto;
+	padding: 0 1em; /* Ruimte aan de zijkanten op kleinere schermen */
+  }
+  
+  /* Responsief gedrag */
+  @media (max-width: 768px) {
+	#one {
+	  padding: 2em 1em; /* Minder padding op kleinere schermen */
+	}
+  
+	#one header.major h2 {
+	  font-size: 1.75em; /* Kleinere koptekst op mobiele apparaten */
+	}
+  
+	#one p {
+	  font-size: 1em; /* Iets kleiner lettertype */
+	  padding: 0; /* Verwijder padding op smalle schermen */
+	}
+  }
+
+  
+  /* Two Section */
+#two {
+	background-color: #ffffff; /* Witte achtergrond */
+	padding: 4em 0; /* Ruimte boven en onder de sectie */
+  }
+  
+  #two .container {
+	max-width: 1200px; /* Limiteer de breedte van de container */
+	margin: 0 auto; /* Centreer de container */
+	text-align: center; /* Tekst uitlijnen in het midden */
+	padding: 0 1em; /* Ruimte aan de zijkanten op kleinere schermen */
+  }
+  
+  #two h3 {
+	font-size: 2em; /* Grotere koptekst */
+	color: #4acaa8; /* Groene kleur passend bij thema */
+	margin-bottom: 1em;
+  }
+  
+  #two p {
+	font-size: 1.1em; /* Iets groter lettertype */
+	color: #555555; /* Donkergrijze kleur voor leesbaarheid */
+	line-height: 1.75; /* Ruimte tussen regels */
+	margin-bottom: 2em; /* Ruimte onder paragrafen */
+  }
+  
+  #two .feature-icons {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap; /* Laat items over meerdere regels lopen indien nodig */
+	justify-content: center; /* Centreer de iconen horizontaal */
+	gap: 1.5em; /* Ruimte tussen de items */
+  }
+  
+  #two .feature-item {
+	display: flex;
+	flex-direction: column; /* Stapel iconen en tekst verticaal */
+	align-items: center;
+	background: #f9f9f9; /* Lichtgrijze achtergrond voor de box */
+	padding: 1em;
+	border-radius: 10px; /* Ronde hoeken */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
+	width: 150px; /* Uniforme breedte */
+	cursor: pointer; /* Wijzig cursor bij hover */
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #two .feature-item:hover {
+	transform: translateY(-5px); /* Spring omhoog bij hover */
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Versterk schaduw bij hover */
+  }
+  
+  #two .icon-button {
+	background: #4acaa8; /* Groene achtergrond voor iconen */
+	color: #ffffff; /* Witte icoonkleur */
+	border: none;
+	border-radius: 50%; /* Maak de knop rond */
+	width: 3em;
+	height: 3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em; /* Icoongrootte */
+	margin-bottom: 0.5em; /* Ruimte onder de knop */
+	cursor: pointer;
+  }
+  
+  #two .icon-button:hover {
+	background: #3aa18e; /* Donkere tint bij hover */
+  }
+  
+  #two .feature-item span {
+	font-size: 1em;
+	color: #333333; /* Donkergrijze kleur voor tekst */
+	margin-top: 0.5em;
+  }
+  
+  /* Responsief gedrag */
+  @media (max-width: 768px) {
+	#two .feature-icons {
+	  flex-direction: column; /* Zet iconen onder elkaar op smalle schermen */
+	  align-items: center;
+	}
+  
+	#two .feature-item {
+	  width: 100%; /* Laat de items de volledige breedte gebruiken */
+	  max-width: 400px; /* Beperk de breedte */
+	}
+  }
+  
